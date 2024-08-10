@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #f7f7f7;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .invitation {
+            max-width: 100%;
+
+            height: auto; /* высота страницы будет автоматически рассчитываться */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .semi-circle {
+            width: 50%;
+            height: 150px;
+            padding: 20px;
+            border-radius: 50% 50% 0 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7);
+            background-image: url('./images/background-top.png');
+            background-position: center top;
+            text-align: center;
+            background-repeat: no-repeat;
+        }
+
+        .rectangle {
+            width: 50%;
+            margin: 0;
+            padding: 20px;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7); /* прозрачный фон */
+        }
+        .rectangle-bottom {
+            width: 50%;
+            height: 150px;
+            padding: 20px;
+            background-image: url('./images/background-bottom.png');
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.7); /* прозрачный фон */
+        }
+        .date {
+            font-size: 24px;
+            font-weight: bold;
+            color: #666;
+        }
+        .location {
+            font-size: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation">
+        <div class="semi-circle">
+        </div>
+        <div class="rectangle">
+            <h1>Дорогие {{ guest_name_1 }} и {{ guest_name_2 }}!</h1>
+            <p>Приглашаем разделить с нами радость этого дня</p>
+            <p class="date">7 сентября 2024 года, в 9:40</p>
+            <p>Торжественная церемония состоится в Дворце бракосочетания №1 г. Санкт-Петербурга, расположенного по адресу:</p>
+            <p class="date">Английская наб., 28</p>
+            <p>Праздничный банкет состоится на теплоходе Деметра.
+                Начало празднования: 11:30 от причала "Медный всадник"</p>
+            <div>
+                <h2 class="heading">С любовью,</h2>
+                <h1 class="heading">Роман и Александра</h1>
+            </div>
+        </div>
+        <div class="rectangle-bottom">
+        </div>
+    </div>
+</body>
+</html>
